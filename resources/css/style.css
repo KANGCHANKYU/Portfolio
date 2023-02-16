@@ -1,0 +1,520 @@
+body
+{
+    font-family: "Open Sans" , sans-serif;
+    color: #272829;
+}
+
+a
+{
+    color : skyblue;
+    text-decoration: nono;
+}
+
+a:hover
+{
+    color: aqua;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3
+{ 
+    font-family: "Raleway", sans-serif;
+
+    text-shadow: 1px 1px 1px;
+}
+
+/*머리*/
+
+#header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    padding: 0 15px;
+    padding-top: 50px;
+    z-index: 9950;
+    background: black;
+    overflow-y: auto;
+}
+
+#header .profile img
+{
+    margin: 15px 50px 20px;
+    display: block;
+    width: 120px;
+    border: 8px solid #2c2f3f;
+    
+}
+
+#header .profile h1
+{
+    font-size: 24px;
+    margin-right: 55px;
+    padding: 0;
+    font-weight: 700;
+    text-align-last:  center;
+    font-family: "Poppins", sans-serif;
+}
+
+#header .profile h1 a,
+#header .profile h1 a:hover
+{
+    color: white;
+    text-decoration: none;
+}
+
+@media(max-width: 1280px)
+{
+    #header{ left: -300px;}
+}
+
+/*네비바*/
+.nav-menu{ padding: 20px 0 0 0; }
+
+.nav-menu *
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-menu>ul>li
+{
+    position: relative;
+    white-space: nowrap;
+}
+
+.nav-menu a,
+.nav-menu a:focus
+{
+    display: flex;
+    align-items: center;
+    color: gainsboro;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+    font-size: 22px;
+}
+
+.nav-menu a i,
+.nav-menu a:focus i
+{
+    font-size: 24px;
+    padding-right: 8px;
+    color: grey;
+}
+
+.nav-menu a:hover,
+.nav-menu .nav-link:focus,
+.nav-menu .active:focus,
+.nav-menu li:hover>a
+{
+    text-decoration: none;
+    color: aqua;
+}
+
+.nav-menu a:hover i,
+.nav-menu .active i,
+.nav-menu .active:focus i,
+.nav-menu li:hover> a i{ color: skyblue; }
+
+/*메인 페이지 화면*/
+#firstPage
+{
+    width: 100%;
+    height: 100vh;
+    background: url(../img/main1.png)top center;
+    background-size: cover;
+}
+
+#firstPage:before
+{
+    content: "";
+    background: rgba(5, 13, 24, 0.3);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  
+}
+
+#firstPage .screen
+{
+    position: relative;
+    z-index: 2;
+}
+
+#firstPage h1
+{ 
+    text-align: top center;
+    margin: 0 0 10px 0;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 56px;
+    color: white
+}
+
+#firstPage p
+{
+    margin-top: 20px;
+    margin-left: 10px;
+    color: white;
+    margin-bottom: 50px;
+    font-size: 30px;
+    font-family: "Poppins",sans-serif;
+}
+
+#firstPage p span
+{
+    color: white;
+    padding-bottom: 4px;
+    letter-spacing: 1px;
+    border-bottom: 3px solid skyblue;
+}
+
+@media (min-width: 1024px)
+{
+    #firstPage { background-attachment: fixed;}
+}
+
+@media(max-width: 760px)
+{
+    #firstPage h1
+    {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    #firstPage h2
+    {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+
+}
+
+/*자기소개 부분 큰부분*/
+#main 
+{
+    margin-left: 320px;
+    margin-right: 20px;
+    padding-bottom: 20px;
+}
+@media (max-width: 1199px) 
+{
+    #main 
+    {
+      margin-left: 0;
+    }
+  }
+section
+{
+    padding-top: 60px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.section-title
+{
+    padding-bottom: 30px;
+}
+
+.section-title h2
+{
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #173b6c;
+    
+}
+
+.section-title h2::after
+{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #149ddd;
+    text-shadow: 4px 2px 2px #140ddd;
+    bottom: 0;
+    left: 0;
+}
+
+.section-title p 
+{
+    font-size: 20px;
+    padding-left: 20px;
+    margin-bottom: 0;
+    box-shadow: 6px 0px 6px gray
+    
+}
+/* 자기 소개 부분 글자*/
+.self
+{
+    background-color:  rgba(206, 200, 200,50%);
+    margin-bottom: 50px;
+}
+.self .row img
+{
+    box-shadow: 6px 0px gray;
+    padding-left: 100px;
+}
+
+.content ul 
+{
+   box-shadow: 0px 0px 10px gray;
+   list-style: none;
+   padding: 0;
+   margin: 40px 40px 0px 0px;
+}
+
+.content ul li 
+{   
+   padding-top: 10px;
+   margin-bottom: 20px;
+   display: flex;
+   align-items: center;
+}
+ 
+.content ul strong 
+{
+    
+   margin-right: 6px;
+}
+ 
+.content ul i
+{
+   font-size: 16px;
+   margin-right: 5px;
+   color: #149ddd;
+   line-height: 0;
+}
+ .content p:last-child 
+{
+   margin-bottom: 0;
+}
+
+
+
+/* 내가 다뤄본 이미지 */
+.imgbox
+{
+    display: block;
+    flex-wrap: wrap;
+    width: 900px;
+    overflow: hidden;
+    padding-top: 10px;
+    background-color: orange;
+    border: solid black;
+    margin-bottom: 50px;
+    margin-left: 100px;
+    max-height: 350px;
+}
+
+#selfh2
+{
+    display: block;
+    margin-left: 360px;
+}
+
+.imgbox img 
+{
+    flex-basis: 20%; /* 한 행당 5개의 이미지 */
+    box-sizing: content-box;
+    padding: 10px;
+    max-width: 150px;
+    max-height: 150px;
+}
+
+/* skill*/
+.skills
+{
+    background-color: rgb(174, 222, 236);
+    margin-bottom: 50px;
+}
+.skills .progress
+ {
+    height: 60px;    /* 스킬 바의 높이 */
+    display: block;
+    background: none;
+    border-radius: 0;
+}
+
+.skills .progress .skill 
+{
+    padding: 0;
+    margin: 0 0 6px 0;
+    text-transform: uppercase;   /* 스킬명 대문자로 */             
+    display: block;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: #050d18; /* 스킬명 색상 */
+}
+
+.skills .progress .skill .val 
+{
+    float: right;
+    /* 스킬 값 오른쪽으로 정렬 */
+    font-style: normal;
+}
+
+.skills .progress-bar-wrap {
+    background: #dce8f8;
+    height: 10px;    /* 스킬 바 뒷 배경 색상 */
+}
+
+.skills .progress-bar {
+    width: 1px;
+    /* 초기 스킬 바의 너비 */
+    height: 10px; /* 스킬 바의 높이 */
+    transition: 0.9s; /* 스킬 바의 애니메이션 시간 */
+    background-color: #149ddd; /* 스킬 바의 색상 */
+}
+
+/*경력및 프로젝트*/
+.career
+{
+    background-color: rgb(174, 236, 184);
+    margin-bottom: 10px;
+}
+.career.career-title 
+{
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #050d18;
+}
+
+.career .career-item
+{
+    padding: 0 0 20px 20px;
+    background: rgb(255,255,255,80%);
+    box-shadow: 0px 0px 10px gray;
+    margin-top: -2px;
+    border-left: 2px solid #1f5297;
+    position: relative;
+
+}
+
+.career.career-item h4 
+{
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    color: #050d18;
+    margin-bottom: 10px;  
+}
+
+.career .career-item h5 
+{
+    font-size: 16px;
+    padding: 5px 15px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.career .career-item ul 
+{
+    padding-left: 20px;
+}
+
+.career .career-item ul li 
+{
+    padding-bottom: 10px;
+}
+
+.career .career-item:last-child
+{
+    padding-bottom: 0;
+}
+
+.career.career-item::before 
+{
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    left: -9px;
+    top: 0;
+    background: #fff;
+    border: 2px solid #1f5297;
+}
+
+.project 
+{
+    background: rgb(255,255,255,50%);
+    border: 3px solid rgb(0, 0, 0,60%);
+    margin: 10px auto;
+}
+
+
+.project h2
+{
+    background-color: rgb(174, 236, 184,0%);
+    font-size: 40px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.sub,
+.final
+{
+    box-shadow: 0px 0px 10px gray;
+    
+    width: 45px;
+    height: 50%;
+    border: 3px solid rgb(0, 0, 0,60%);
+    margin: 10px 0px 10px 10px;
+}
+
+/*하단 바*/
+#footer 
+{
+    padding: 15px;
+    color: #f4f6fd;
+    font-size: 14px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    z-index: 9999;
+    background: #040b14;
+}
+
+#footer .copyright 
+{
+    text-align: center;
+}
+
+#footer .credits 
+{
+    padding-top: 5px;
+    text-align: center;
+    font-size: 13px;
+    color: #eaebf0;
+}
+
+@media (max-width: 1199px) 
+{
+    #footer {
+        position: static;
+        width: auto;
+        padding-right: 20px 15px;
+    }
+}
+
